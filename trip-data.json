@@ -1,0 +1,2061 @@
+{
+  "$schema": "./schemas/trip-data.schema.json",
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "todo": true,
+      "driving": false,
+      "ledger": false
+    },
+    "language": "zh-CN",
+    "persistence": {
+      "mode": "local"
+    }
+  },
+  "metadata": {
+    "tripId": "spain-2026-autumn",
+    "title": "西班牙｜地中海电影之旅",
+    "language": "zh-CN",
+    "timeZone": "Europe/Madrid",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/templates/template-10-broad-riverland.webp"
+      ]
+    }
+  },
+  "trip": {
+    "status": "confirmed",
+    "startDate": "2026-09-30",
+    "endDate": "2026-10-11",
+    "dayCount": 12,
+    "nightCountAway": 11,
+    "countries": [
+      {
+        "code": "ES",
+        "nameZh": "西班牙",
+        "nameEn": "Spain"
+      }
+    ],
+    "primaryDestinationCountries": [
+      "ES"
+    ],
+    "citiesAndAreas": [
+      "巴塞罗那",
+      "马略卡岛",
+      "格拉纳达",
+      "塞维利亚",
+      "马德里"
+    ],
+    "routeSummary": "巴塞罗那 → 马略卡岛 → 格拉纳达 → 塞维利亚 → 马德里",
+    "groupSize": 6
+  },
+  "flightJourneys": [
+    {
+      "id": "journey-outbound",
+      "title": "北京 → 布鲁塞尔 → 巴塞罗那",
+      "status": "confirmed"
+    },
+    {
+      "id": "journey-barcelona-mallorca",
+      "title": "巴塞罗那 → 马略卡岛",
+      "status": "planned"
+    },
+    {
+      "id": "journey-mallorca-granada",
+      "title": "马略卡岛 → 格拉纳达",
+      "status": "planned"
+    },
+    {
+      "id": "journey-return",
+      "title": "马德里 → 重庆 → 北京",
+      "status": "confirmed"
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-hu491",
+      "journeyId": "journey-outbound",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "海南航空",
+        "code": "HU"
+      },
+      "flightNumber": "HU491",
+      "departure": {
+        "airportCode": "PEK",
+        "city": "北京",
+        "airportName": "北京首都国际机场",
+        "terminal": "T2",
+        "date": "2026-09-30",
+        "time": "02:40",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "BRU",
+        "city": "布鲁塞尔",
+        "airportName": "布鲁塞尔机场",
+        "date": "2026-09-30",
+        "time": "06:50",
+        "utcOffset": "+02:00"
+      }
+    },
+    {
+      "id": "flight-sn3697",
+      "journeyId": "journey-outbound",
+      "sequence": 2,
+      "airline": {
+        "nameZh": "布鲁塞尔航空",
+        "code": "SN"
+      },
+      "flightNumber": "SN3697",
+      "connectionFromPrevious": {
+        "plannedDurationText": "中转 2小时45分"
+      },
+      "departure": {
+        "airportCode": "BRU",
+        "city": "布鲁塞尔",
+        "airportName": "布鲁塞尔机场",
+        "date": "2026-09-30",
+        "time": "09:35",
+        "utcOffset": "+02:00"
+      },
+      "arrival": {
+        "airportCode": "BCN",
+        "city": "巴塞罗那",
+        "airportName": "巴塞罗那埃尔普拉特机场",
+        "terminal": "T1",
+        "date": "2026-09-30",
+        "time": "11:35",
+        "utcOffset": "+02:00"
+      }
+    },
+    {
+      "id": "flight-ux6037",
+      "journeyId": "journey-barcelona-mallorca",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "欧罗巴航空",
+        "code": "UX"
+      },
+      "flightNumber": "UX6037",
+      "departure": {
+        "airportCode": "BCN",
+        "city": "巴塞罗那",
+        "airportName": "巴塞罗那埃尔普拉特机场",
+        "terminal": "T1",
+        "date": "2026-10-03",
+        "time": "11:55",
+        "utcOffset": "+02:00"
+      },
+      "arrival": {
+        "airportCode": "PMI",
+        "city": "马略卡岛",
+        "airportName": "帕尔马马略卡机场",
+        "date": "2026-10-03",
+        "time": "12:40",
+        "utcOffset": "+02:00"
+      }
+    },
+    {
+      "id": "flight-ux5201",
+      "journeyId": "journey-mallorca-granada",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "欧罗巴航空",
+        "code": "UX"
+      },
+      "flightNumber": "UX5201",
+      "departure": {
+        "airportCode": "PMI",
+        "city": "马略卡岛",
+        "airportName": "帕尔马马略卡机场",
+        "date": "2026-10-06",
+        "time": "12:30",
+        "utcOffset": "+02:00"
+      },
+      "arrival": {
+        "airportCode": "GRX",
+        "city": "格拉纳达",
+        "airportName": "格拉纳达机场",
+        "date": "2026-10-06",
+        "time": "13:55",
+        "utcOffset": "+02:00"
+      }
+    },
+    {
+      "id": "flight-hu7972",
+      "journeyId": "journey-return",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "海南航空",
+        "code": "HU"
+      },
+      "flightNumber": "HU7972",
+      "departure": {
+        "airportCode": "MAD",
+        "city": "马德里",
+        "airportName": "马德里巴拉哈斯机场",
+        "terminal": "T1",
+        "date": "2026-10-11",
+        "time": "11:05",
+        "utcOffset": "+02:00"
+      },
+      "arrival": {
+        "airportCode": "CKG",
+        "city": "重庆",
+        "airportName": "重庆江北国际机场",
+        "terminal": "T3",
+        "date": "2026-10-12",
+        "time": "05:00",
+        "utcOffset": "+08:00"
+      }
+    },
+    {
+      "id": "flight-hu7368",
+      "journeyId": "journey-return",
+      "sequence": 2,
+      "airline": {
+        "nameZh": "海南航空",
+        "code": "HU"
+      },
+      "flightNumber": "HU7368",
+      "connectionFromPrevious": {
+        "plannedDurationText": "中转 2小时25分"
+      },
+      "departure": {
+        "airportCode": "CKG",
+        "city": "重庆",
+        "airportName": "重庆江北国际机场",
+        "terminal": "T3",
+        "date": "2026-10-12",
+        "time": "07:25",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "PEK",
+        "city": "北京",
+        "airportName": "北京首都国际机场",
+        "terminal": "T2",
+        "date": "2026-10-12",
+        "time": "10:00",
+        "utcOffset": "+08:00"
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "stay-barcelona",
+      "name": "我在巴塞罗那的地址公寓 My Address in Barcelona",
+      "city": "巴塞罗那",
+      "status": "confirmed",
+      "placeId": "place-stay-barcelona",
+      "checkIn": {
+        "date": "2026-09-30",
+        "time": "15:00-19:00"
+      },
+      "checkOut": {
+        "date": "2026-10-03",
+        "time": "11:00"
+      },
+      "note": "住宿已确认；未包含订单号与私人联系方式。"
+    },
+    {
+      "id": "stay-mallorca",
+      "name": "Ruberts的房源",
+      "city": "马略卡岛",
+      "status": "confirmed",
+      "placeId": "place-stay-mallorca",
+      "checkIn": {
+        "date": "2026-10-03",
+        "time": "16:00"
+      },
+      "checkOut": {
+        "date": "2026-10-06",
+        "time": "11:00"
+      },
+      "note": "住宿已确认；未包含订单号与私人联系方式。"
+    },
+    {
+      "id": "stay-granada",
+      "name": "Apartamentos en el corazón de Granada",
+      "city": "格拉纳达",
+      "status": "confirmed",
+      "placeId": "place-stay-granada",
+      "checkIn": {
+        "date": "2026-10-06",
+        "time": "15:00-22:00"
+      },
+      "checkOut": {
+        "date": "2026-10-07",
+        "time": "08:00-11:00"
+      },
+      "note": "住宿已确认；未包含订单号与私人联系方式。"
+    },
+    {
+      "id": "stay-seville",
+      "name": "塞维利亚的房源",
+      "city": "塞维利亚",
+      "status": "confirmed",
+      "placeId": "place-stay-seville",
+      "checkIn": {
+        "date": "2026-10-07",
+        "time": "15:00"
+      },
+      "checkOut": {
+        "date": "2026-10-09",
+        "time": "12:00"
+      },
+      "note": "住宿已确认；未包含订单号与私人联系方式。"
+    },
+    {
+      "id": "stay-madrid",
+      "name": "马德里住宿待补充",
+      "city": "马德里",
+      "status": "pending",
+      "checkIn": {
+        "date": "2026-10-09",
+        "time": "待确认"
+      },
+      "checkOut": {
+        "date": "2026-10-11",
+        "time": "待确认"
+      },
+      "note": "酒店名称、地址和入住信息待补充。"
+    }
+  ],
+  "groundTransport": {
+    "rentalCar": null,
+    "rentalChecklist": [],
+    "drivingNotes": [],
+    "drivingReferenceLinks": [],
+    "plannedRoadLegs": [
+      {
+        "id": "road-barcelona-coast",
+        "date": "2026-10-02",
+        "mode": "private-car",
+        "route": [
+          "巴塞罗那",
+          "Tossa de Mar",
+          "Blanes",
+          "Tibidabo",
+          "巴塞罗那"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "road-mallorca",
+        "startDate": "2026-10-04",
+        "endDate": "2026-10-06",
+        "mode": "rental-car",
+        "route": [
+          "Ruberts",
+          "索列尔",
+          "德亚",
+          "巴尔德莫萨",
+          "帕尔马",
+          "德拉赫洞穴"
+        ],
+        "status": "details-pending"
+      }
+    ],
+    "publicTransitAndRail": [
+      {
+        "id": "transport-granada-seville",
+        "date": "2026-10-07",
+        "from": "格拉纳达",
+        "to": "塞维利亚",
+        "mode": "train-or-bus",
+        "status": "to-book"
+      },
+      {
+        "id": "transport-seville-madrid",
+        "date": "2026-10-09",
+        "from": "塞维利亚",
+        "to": "马德里",
+        "mode": "train",
+        "status": "to-book"
+      }
+    ]
+  },
+  "days": [
+    {
+      "id": "day-01",
+      "day": 1,
+      "date": "2026-09-30",
+      "title": "抵达与城市日落",
+      "locations": [
+        "巴塞罗那"
+      ],
+      "schedule": [
+        {
+          "id": "day-01-item-01",
+          "time": "11:35",
+          "text": "抵达巴塞罗那 T1",
+          "type": "transfer"
+        },
+        {
+          "id": "day-01-item-02",
+          "time": "待定",
+          "text": "前往酒店寄存行李（正式入住时间为15:00-19:00）",
+          "type": "check-in"
+        },
+        {
+          "id": "day-01-item-03",
+          "time": "灵活",
+          "text": "午餐",
+          "type": "restaurant"
+        },
+        {
+          "id": "day-01-item-04",
+          "time": "待定",
+          "text": "待预订 · 桂尔公园（计划后门进入、正门离开）",
+          "type": "attraction",
+          "placeId": "place-park-guell",
+          "ticketIds": [
+            "ticket-park-guell"
+          ]
+        },
+        {
+          "id": "day-01-item-05",
+          "time": "待定",
+          "text": "焦糖山看日落",
+          "type": "attraction",
+          "placeId": "place-carmel-bunkers"
+        },
+        {
+          "id": "day-01-item-06",
+          "time": "灵活",
+          "text": "晚餐后返回酒店",
+          "type": "restaurant"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-02",
+      "day": 2,
+      "date": "2026-10-01",
+      "title": "高迪与哥特街巷",
+      "locations": [
+        "巴塞罗那"
+      ],
+      "schedule": [
+        {
+          "id": "day-02-item-01",
+          "time": "待定",
+          "text": "待预订 · 米拉之家（建议早去避开人流）",
+          "type": "attraction",
+          "placeId": "place-casa-mila",
+          "ticketIds": [
+            "ticket-casa-mila"
+          ]
+        },
+        {
+          "id": "day-02-item-02",
+          "time": "待定",
+          "text": "待预订 · 巴特罗之家（草案中倾向金票）",
+          "type": "attraction",
+          "placeId": "place-casa-batllo",
+          "ticketIds": [
+            "ticket-casa-batllo"
+          ]
+        },
+        {
+          "id": "day-02-item-03",
+          "time": "灵活",
+          "text": "哥特区闲逛与午餐",
+          "type": "walk",
+          "placeId": "place-gothic-quarter"
+        },
+        {
+          "id": "day-02-item-04",
+          "time": "17:30",
+          "text": "圣家族大教堂（建议至少提前20分钟抵达；计划在圣家堂地铁拍摄专场并在附近拍照）",
+          "type": "attraction",
+          "placeId": "place-sagrada-familia",
+          "ticketIds": [
+            "ticket-sagrada-familia"
+          ]
+        },
+        {
+          "id": "day-02-item-05",
+          "time": "灵活",
+          "text": "晚餐后返回酒店",
+          "type": "restaurant"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-03",
+      "day": 3,
+      "date": "2026-10-02",
+      "title": "海岸小镇与山城灯火",
+      "locations": [
+        "巴塞罗那",
+        "Tossa de Mar",
+        "Blanes",
+        "Tibidabo"
+      ],
+      "schedule": [
+        {
+          "id": "day-03-item-01",
+          "time": "待定",
+          "text": "Tossa de Mar 小镇",
+          "type": "transfer",
+          "placeId": "place-tossa"
+        },
+        {
+          "id": "day-03-item-02",
+          "time": "待定",
+          "text": "Blanes 植物园",
+          "type": "attraction",
+          "placeId": "place-blanes-garden"
+        },
+        {
+          "id": "day-03-item-03",
+          "time": "待定",
+          "text": "Tibidabo 山与神爱世人机位",
+          "type": "attraction",
+          "placeId": "place-tibidabo"
+        },
+        {
+          "id": "day-03-item-04",
+          "time": "待定",
+          "text": "山下游乐园",
+          "type": "attraction"
+        },
+        {
+          "id": "day-03-item-05",
+          "time": "待定",
+          "text": "全天包车",
+          "type": "transfer"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-04",
+      "day": 4,
+      "date": "2026-10-03",
+      "title": "从城市飞向海岛",
+      "locations": [
+        "巴塞罗那",
+        "马略卡岛"
+      ],
+      "schedule": [
+        {
+          "id": "day-04-item-01",
+          "time": "待定",
+          "text": "待确认 · UX6037 · 巴塞罗那 T1 → 马略卡 PMI（11:55–12:40）",
+          "type": "flight"
+        },
+        {
+          "id": "day-04-item-02",
+          "time": "待定",
+          "text": "帕尔马大教堂与阿尔穆戴纳王宫外观（以外观拍照为主，可不入内）",
+          "type": "attraction",
+          "placeId": "place-palma-cathedral"
+        },
+        {
+          "id": "day-04-item-03",
+          "time": "16:00",
+          "text": "入住Ruberts的房源",
+          "type": "check-in",
+          "placeId": "place-stay-mallorca"
+        },
+        {
+          "id": "day-04-item-04",
+          "time": "待定",
+          "text": "酒店与房源拍照",
+          "type": "attraction"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-05",
+      "day": 5,
+      "date": "2026-10-04",
+      "title": "特拉蒙塔纳山间小镇",
+      "locations": [
+        "索列尔",
+        "德亚",
+        "巴尔德莫萨",
+        "马略卡岛"
+      ],
+      "schedule": [
+        {
+          "id": "day-05-item-01",
+          "time": "待定",
+          "text": "索列尔小镇与复古火车",
+          "type": "attraction",
+          "placeId": "place-soller"
+        },
+        {
+          "id": "day-05-item-02",
+          "time": "灵活",
+          "text": "德亚小镇午餐与下午茶",
+          "type": "restaurant",
+          "placeId": "place-deia"
+        },
+        {
+          "id": "day-05-item-03",
+          "time": "待定",
+          "text": "巴尔德莫萨小镇",
+          "type": "attraction",
+          "placeId": "place-valldemossa"
+        },
+        {
+          "id": "day-05-item-04",
+          "time": "待定",
+          "text": "帕尔马悬崖餐厅（柠檬和橘子是当地特色；餐厅名称及预订状态待确认）",
+          "type": "restaurant"
+        },
+        {
+          "id": "day-05-item-05",
+          "time": "待定",
+          "text": "马略卡自驾",
+          "type": "transfer"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-06",
+      "day": 6,
+      "date": "2026-10-05",
+      "title": "地下音乐与果冻海",
+      "locations": [
+        "马略卡岛"
+      ],
+      "schedule": [
+        {
+          "id": "day-06-item-01",
+          "time": "待定",
+          "text": "待确认 · 德拉赫洞穴与洞穴音乐会",
+          "type": "attraction",
+          "placeId": "place-drach-caves",
+          "ticketIds": [
+            "ticket-drach-caves"
+          ]
+        },
+        {
+          "id": "day-06-item-02",
+          "time": "待定",
+          "text": "果冻海海滩（需要提前查询停车位置）",
+          "type": "attraction"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-07",
+      "day": 7,
+      "date": "2026-10-06",
+      "title": "海岛落幕与宫殿夜色",
+      "locations": [
+        "马略卡岛",
+        "格拉纳达"
+      ],
+      "schedule": [
+        {
+          "id": "day-07-item-01",
+          "time": "11:00",
+          "text": "马略卡房源退房",
+          "type": "check-in",
+          "placeId": "place-stay-mallorca"
+        },
+        {
+          "id": "day-07-item-02",
+          "time": "待定",
+          "text": "待确认 · UX5201 · 马略卡 PMI → 格拉纳达 GRX（12:30–13:55）",
+          "type": "flight"
+        },
+        {
+          "id": "day-07-item-03",
+          "time": "待定",
+          "text": "入住格拉纳达公寓（入住时间15:00-22:00）",
+          "type": "check-in",
+          "placeId": "place-stay-granada"
+        },
+        {
+          "id": "day-07-item-04",
+          "time": "待定",
+          "text": "格拉纳达老城",
+          "type": "walk",
+          "placeId": "place-granada-old-town"
+        },
+        {
+          "id": "day-07-item-05",
+          "time": "待定",
+          "text": "阿尔罕布拉宫外围夜景",
+          "type": "attraction",
+          "placeId": "place-alhambra"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-08",
+      "day": 8,
+      "date": "2026-10-07",
+      "title": "阿尔罕布拉宫与南下转场",
+      "locations": [
+        "格拉纳达",
+        "塞维利亚"
+      ],
+      "schedule": [
+        {
+          "id": "day-08-item-01",
+          "time": "待定",
+          "text": "格拉纳达公寓退房（退房时间08:00-11:00）",
+          "type": "check-in",
+          "placeId": "place-stay-granada"
+        },
+        {
+          "id": "day-08-item-02",
+          "time": "待定",
+          "text": "待确认 · 阿尔罕布拉宫",
+          "type": "attraction",
+          "placeId": "place-alhambra",
+          "ticketIds": [
+            "ticket-alhambra"
+          ]
+        },
+        {
+          "id": "day-08-item-03",
+          "time": "待定",
+          "text": "待预订 · 格拉纳达前往塞维利亚",
+          "type": "transfer"
+        },
+        {
+          "id": "day-08-item-04",
+          "time": "15:00",
+          "text": "入住塞维利亚房源",
+          "type": "check-in",
+          "placeId": "place-stay-seville"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-09",
+      "day": 9,
+      "date": "2026-10-08",
+      "title": "安达卢西亚盛景",
+      "locations": [
+        "塞维利亚"
+      ],
+      "schedule": [
+        {
+          "id": "day-09-item-01",
+          "time": "待定",
+          "text": "待预订 · 塞维利亚大教堂",
+          "type": "attraction",
+          "placeId": "place-seville-cathedral",
+          "ticketIds": [
+            "ticket-seville-cathedral"
+          ]
+        },
+        {
+          "id": "day-09-item-02",
+          "time": "待定",
+          "text": "待预订 · 塞维利亚王宫",
+          "type": "attraction",
+          "placeId": "place-seville-alcazar",
+          "ticketIds": [
+            "ticket-seville-alcazar"
+          ]
+        },
+        {
+          "id": "day-09-item-03",
+          "time": "待定",
+          "text": "待确认 · 塞维利亚斗牛场（草案写明薇姐、万万参加，需确认其他同行人安排）",
+          "type": "attraction",
+          "placeId": "place-seville-bullring",
+          "ticketIds": [
+            "ticket-seville-bullring"
+          ]
+        },
+        {
+          "id": "day-09-item-04",
+          "time": "待定",
+          "text": "西班牙广场日落",
+          "type": "attraction",
+          "placeId": "place-plaza-espana"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-10",
+      "day": 10,
+      "date": "2026-10-09",
+      "title": "从南方进入首都",
+      "locations": [
+        "塞维利亚",
+        "马德里"
+      ],
+      "schedule": [
+        {
+          "id": "day-10-item-01",
+          "time": "12:00",
+          "text": "塞维利亚房源退房",
+          "type": "check-in",
+          "placeId": "place-stay-seville"
+        },
+        {
+          "id": "day-10-item-02",
+          "time": "待定",
+          "text": "待预订 · 塞维利亚前往马德里",
+          "type": "transfer"
+        },
+        {
+          "id": "day-10-item-03",
+          "time": "待定",
+          "text": "丽池公园划船（计划下午游玩）",
+          "type": "attraction",
+          "placeId": "place-retiro"
+        },
+        {
+          "id": "day-10-item-04",
+          "time": "待定",
+          "text": "待确认 · 普拉多博物馆（草案考虑晚间可能的免费时段；馆内不允许拍照）",
+          "type": "attraction",
+          "placeId": "place-prado",
+          "ticketIds": [
+            "ticket-prado"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "day-11",
+      "day": 11,
+      "date": "2026-10-10",
+      "title": "王宫、购物与城市夜景",
+      "locations": [
+        "马德里"
+      ],
+      "schedule": [
+        {
+          "id": "day-11-item-01",
+          "time": "待定",
+          "text": "太阳门广场",
+          "type": "attraction",
+          "placeId": "place-puerta-sol"
+        },
+        {
+          "id": "day-11-item-02",
+          "time": "待定",
+          "text": "待确认 · 马德里王宫",
+          "type": "attraction",
+          "placeId": "place-madrid-palace",
+          "ticketIds": [
+            "ticket-madrid-palace"
+          ]
+        },
+        {
+          "id": "day-11-item-03",
+          "time": "待定",
+          "text": "马德里市区漫步与购物（草案特别标注Zara；可加入跳蚤市场）",
+          "type": "walk"
+        },
+        {
+          "id": "day-11-item-04",
+          "time": "待定",
+          "text": "备选 · 托莱多古城（距马德里约1小时，若选择则需要购买车票并压缩马德里市区安排）",
+          "type": "transfer"
+        },
+        {
+          "id": "day-11-item-05",
+          "time": "待定",
+          "text": "德波神庙夜景",
+          "type": "attraction",
+          "placeId": "place-temple-debod"
+        },
+        {
+          "id": "day-11-item-06",
+          "time": "待定",
+          "text": "待预订 · 马德里Sky Bar",
+          "type": "attraction",
+          "ticketIds": [
+            "ticket-madrid-skybar"
+          ]
+        }
+      ],
+      "notes": [
+        "托莱多为备选支线，不与马德里市区完整行程同时执行。"
+      ]
+    },
+    {
+      "id": "day-12",
+      "day": 12,
+      "date": "2026-10-11",
+      "title": "离开西班牙",
+      "locations": [
+        "马德里机场"
+      ],
+      "schedule": [
+        {
+          "id": "day-12-item-01",
+          "time": "待定",
+          "text": "待确认 · HU7972 · 马德里 T1 → 重庆（11:05 起飞，次日抵达）",
+          "type": "flight"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "places": [
+    {
+      "id": "city-barcelona",
+      "nameZh": "巴塞罗那",
+      "cityOrArea": "Barcelona",
+      "countryCode": "ES",
+      "category": "city",
+      "navigation": {
+        "query": "Barcelona, Spain"
+      }
+    },
+    {
+      "id": "city-mallorca",
+      "nameZh": "马略卡岛",
+      "cityOrArea": "Mallorca",
+      "countryCode": "ES",
+      "category": "area",
+      "navigation": {
+        "query": "Mallorca, Spain"
+      }
+    },
+    {
+      "id": "city-granada",
+      "nameZh": "格拉纳达",
+      "cityOrArea": "Granada",
+      "countryCode": "ES",
+      "category": "city",
+      "navigation": {
+        "query": "Granada, Spain"
+      }
+    },
+    {
+      "id": "city-seville",
+      "nameZh": "塞维利亚",
+      "cityOrArea": "Sevilla",
+      "countryCode": "ES",
+      "category": "city",
+      "navigation": {
+        "query": "Sevilla, Spain"
+      }
+    },
+    {
+      "id": "city-madrid",
+      "nameZh": "马德里",
+      "cityOrArea": "Madrid",
+      "countryCode": "ES",
+      "category": "city",
+      "navigation": {
+        "query": "Madrid, Spain"
+      }
+    },
+    {
+      "id": "place-park-guell",
+      "nameZh": "桂尔公园",
+      "cityOrArea": "Barcelona",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Park Güell, Barcelona"
+      }
+    },
+    {
+      "id": "place-carmel-bunkers",
+      "nameZh": "焦糖山观景台",
+      "cityOrArea": "Barcelona",
+      "countryCode": "ES",
+      "category": "viewpoint",
+      "navigation": {
+        "query": "Bunkers del Carmel, Barcelona"
+      }
+    },
+    {
+      "id": "place-casa-mila",
+      "nameZh": "米拉之家",
+      "cityOrArea": "Barcelona",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Casa Milà, Barcelona"
+      }
+    },
+    {
+      "id": "place-casa-batllo",
+      "nameZh": "巴特罗之家",
+      "cityOrArea": "Barcelona",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Casa Batlló, Barcelona"
+      }
+    },
+    {
+      "id": "place-gothic-quarter",
+      "nameZh": "哥特区",
+      "cityOrArea": "Barcelona",
+      "countryCode": "ES",
+      "category": "neighborhood",
+      "navigation": {
+        "query": "Gothic Quarter, Barcelona"
+      }
+    },
+    {
+      "id": "place-sagrada-familia",
+      "nameZh": "圣家族大教堂",
+      "cityOrArea": "Barcelona",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Sagrada Família, Barcelona"
+      }
+    },
+    {
+      "id": "place-tossa",
+      "nameZh": "Tossa de Mar",
+      "cityOrArea": "Tossa de Mar",
+      "countryCode": "ES",
+      "category": "town",
+      "navigation": {
+        "query": "Tossa de Mar, Spain"
+      }
+    },
+    {
+      "id": "place-blanes-garden",
+      "nameZh": "Blanes 植物园",
+      "cityOrArea": "Blanes",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Marimurtra Botanical Garden, Blanes"
+      }
+    },
+    {
+      "id": "place-tibidabo",
+      "nameZh": "Tibidabo 山",
+      "cityOrArea": "Barcelona",
+      "countryCode": "ES",
+      "category": "viewpoint",
+      "navigation": {
+        "query": "Tibidabo, Barcelona"
+      }
+    },
+    {
+      "id": "place-palma-cathedral",
+      "nameZh": "帕尔马大教堂",
+      "cityOrArea": "Palma",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Catedral-Basílica de Santa María de Mallorca"
+      }
+    },
+    {
+      "id": "place-soller",
+      "nameZh": "索列尔小镇",
+      "cityOrArea": "Sóller",
+      "countryCode": "ES",
+      "category": "town",
+      "navigation": {
+        "query": "Sóller, Mallorca"
+      }
+    },
+    {
+      "id": "place-deia",
+      "nameZh": "德亚小镇",
+      "cityOrArea": "Deià",
+      "countryCode": "ES",
+      "category": "town",
+      "navigation": {
+        "query": "Deià, Mallorca"
+      }
+    },
+    {
+      "id": "place-valldemossa",
+      "nameZh": "巴尔德莫萨小镇",
+      "cityOrArea": "Valldemossa",
+      "countryCode": "ES",
+      "category": "town",
+      "navigation": {
+        "query": "Valldemossa, Mallorca"
+      }
+    },
+    {
+      "id": "place-drach-caves",
+      "nameZh": "德拉赫洞穴",
+      "cityOrArea": "Porto Cristo",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Cuevas del Drach, Mallorca"
+      }
+    },
+    {
+      "id": "place-granada-old-town",
+      "nameZh": "格拉纳达老城",
+      "cityOrArea": "Granada",
+      "countryCode": "ES",
+      "category": "neighborhood",
+      "navigation": {
+        "query": "Granada old town, Spain"
+      }
+    },
+    {
+      "id": "place-alhambra",
+      "nameZh": "阿尔罕布拉宫",
+      "cityOrArea": "Granada",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Alhambra, Granada"
+      }
+    },
+    {
+      "id": "place-seville-cathedral",
+      "nameZh": "塞维利亚大教堂",
+      "cityOrArea": "Sevilla",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Catedral de Sevilla"
+      }
+    },
+    {
+      "id": "place-seville-alcazar",
+      "nameZh": "塞维利亚王宫",
+      "cityOrArea": "Sevilla",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Real Alcázar de Sevilla"
+      }
+    },
+    {
+      "id": "place-seville-bullring",
+      "nameZh": "塞维利亚斗牛场",
+      "cityOrArea": "Sevilla",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Plaza de Toros de la Maestranza, Sevilla"
+      }
+    },
+    {
+      "id": "place-plaza-espana",
+      "nameZh": "西班牙广场",
+      "cityOrArea": "Sevilla",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Plaza de España, Sevilla"
+      }
+    },
+    {
+      "id": "place-retiro",
+      "nameZh": "丽池公园",
+      "cityOrArea": "Madrid",
+      "countryCode": "ES",
+      "category": "park",
+      "navigation": {
+        "query": "El Retiro Park, Madrid"
+      }
+    },
+    {
+      "id": "place-prado",
+      "nameZh": "普拉多博物馆",
+      "cityOrArea": "Madrid",
+      "countryCode": "ES",
+      "category": "museum",
+      "navigation": {
+        "query": "Museo Nacional del Prado, Madrid"
+      }
+    },
+    {
+      "id": "place-puerta-sol",
+      "nameZh": "太阳门广场",
+      "cityOrArea": "Madrid",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Puerta del Sol, Madrid"
+      }
+    },
+    {
+      "id": "place-madrid-palace",
+      "nameZh": "马德里王宫",
+      "cityOrArea": "Madrid",
+      "countryCode": "ES",
+      "category": "attraction",
+      "navigation": {
+        "query": "Royal Palace of Madrid"
+      }
+    },
+    {
+      "id": "place-temple-debod",
+      "nameZh": "德波神庙",
+      "cityOrArea": "Madrid",
+      "countryCode": "ES",
+      "category": "viewpoint",
+      "navigation": {
+        "query": "Temple of Debod, Madrid"
+      }
+    },
+    {
+      "id": "place-stay-barcelona",
+      "nameZh": "我在巴塞罗那的地址公寓 My Address in Barcelona",
+      "cityOrArea": "巴塞罗那",
+      "countryCode": "ES",
+      "category": "stay-premise",
+      "address": "Ronda Sant Pere, 35, Eixample, Barcelona, 08010, Spain",
+      "navigation": {
+        "query": "Ronda Sant Pere, 35, Eixample, Barcelona, 08010, Spain"
+      }
+    },
+    {
+      "id": "place-stay-mallorca",
+      "nameZh": "Ruberts的房源",
+      "cityOrArea": "马略卡岛",
+      "countryCode": "ES",
+      "category": "stay-premise",
+      "address": "Carrer de Ruberts, s/n, Ruberts, Mallorca, Spain",
+      "navigation": {
+        "query": "Carrer de Ruberts, s/n, Ruberts, Mallorca, Spain"
+      }
+    },
+    {
+      "id": "place-stay-granada",
+      "nameZh": "Apartamentos en el corazón de Granada",
+      "cityOrArea": "格拉纳达",
+      "countryCode": "ES",
+      "category": "stay-premise",
+      "address": "Calle Recogidas, Granada, 18005, Spain",
+      "navigation": {
+        "query": "Calle Recogidas, Granada, 18005, Spain"
+      }
+    },
+    {
+      "id": "place-stay-seville",
+      "nameZh": "塞维利亚的房源",
+      "cityOrArea": "塞维利亚",
+      "countryCode": "ES",
+      "category": "stay-premise",
+      "address": "Calle Fernández y González, 16, Sevilla, Spain",
+      "navigation": {
+        "query": "Calle Fernández y González, 16, Sevilla, Spain"
+      }
+    }
+  ],
+  "restaurants": [],
+  "bookingsAndTickets": [
+    {
+      "name": "桂尔公园",
+      "day": 1,
+      "status": "needed"
+    },
+    {
+      "name": "米拉之家",
+      "day": 2,
+      "status": "needed"
+    },
+    {
+      "name": "巴特罗之家",
+      "day": 2,
+      "status": "needed"
+    },
+    {
+      "name": "圣家族大教堂",
+      "day": 2,
+      "status": "purchased"
+    },
+    {
+      "name": "德拉赫洞穴",
+      "day": 6,
+      "status": "planned"
+    },
+    {
+      "name": "阿尔罕布拉宫",
+      "day": 8,
+      "status": "needed"
+    },
+    {
+      "name": "塞维利亚大教堂",
+      "day": 9,
+      "status": "needed"
+    },
+    {
+      "name": "塞维利亚王宫",
+      "day": 9,
+      "status": "needed"
+    },
+    {
+      "name": "塞维利亚斗牛场",
+      "day": 9,
+      "status": "planned"
+    },
+    {
+      "name": "普拉多博物馆",
+      "day": 10,
+      "status": "planned"
+    },
+    {
+      "name": "马德里王宫",
+      "day": 11,
+      "status": "planned"
+    },
+    {
+      "name": "马德里 Sky Bar",
+      "day": 11,
+      "status": "needed"
+    }
+  ],
+  "ticketPlanning": {
+    "statusStorage": "local",
+    "statusStorageNote": "门票勾选状态只保存在当前浏览器；页面不包含订单号。",
+    "items": [
+      {
+        "id": "ticket-park-guell",
+        "name": "桂尔公园",
+        "day": 1,
+        "dayId": "day-01",
+        "requirement": "advance-required",
+        "purchaseStatus": "needed",
+        "guidance": [
+          "尚未提供订单凭证。"
+        ],
+        "scheduleItemIds": [
+          "day-01-item-04"
+        ]
+      },
+      {
+        "id": "ticket-casa-mila",
+        "name": "米拉之家",
+        "day": 2,
+        "dayId": "day-02",
+        "requirement": "advance-recommended",
+        "purchaseStatus": "needed",
+        "guidance": [
+          "建议安排较早场次。"
+        ],
+        "scheduleItemIds": [
+          "day-02-item-01"
+        ]
+      },
+      {
+        "id": "ticket-casa-batllo",
+        "name": "巴特罗之家",
+        "day": 2,
+        "dayId": "day-02",
+        "requirement": "advance-recommended",
+        "purchaseStatus": "needed",
+        "guidance": [
+          "行程草案倾向金票。"
+        ],
+        "scheduleItemIds": [
+          "day-02-item-02"
+        ]
+      },
+      {
+        "id": "ticket-sagrada-familia",
+        "name": "圣家族大教堂",
+        "day": 2,
+        "dayId": "day-02",
+        "requirement": "advance-required",
+        "purchaseStatus": "purchased",
+        "guidance": [
+          "已确认：10月1日17:30，5位成人＋1位儿童；建议提前20分钟抵达。"
+        ],
+        "scheduleItemIds": [
+          "day-02-item-04"
+        ]
+      },
+      {
+        "id": "ticket-drach-caves",
+        "name": "德拉赫洞穴",
+        "day": 6,
+        "dayId": "day-06",
+        "requirement": "needs-confirmation",
+        "purchaseStatus": "planned",
+        "guidance": [
+          "场次与购票状态待确认。"
+        ],
+        "scheduleItemIds": [
+          "day-06-item-01"
+        ]
+      },
+      {
+        "id": "ticket-alhambra",
+        "name": "阿尔罕布拉宫",
+        "day": 8,
+        "dayId": "day-08",
+        "requirement": "advance-required",
+        "purchaseStatus": "needed",
+        "guidance": [
+          "需确认参观场次并提前购票。"
+        ],
+        "scheduleItemIds": [
+          "day-08-item-02"
+        ]
+      },
+      {
+        "id": "ticket-seville-cathedral",
+        "name": "塞维利亚大教堂",
+        "day": 9,
+        "dayId": "day-09",
+        "requirement": "advance-required",
+        "purchaseStatus": "needed",
+        "guidance": [
+          "尚未提供订单凭证。"
+        ],
+        "scheduleItemIds": [
+          "day-09-item-01"
+        ]
+      },
+      {
+        "id": "ticket-seville-alcazar",
+        "name": "塞维利亚王宫",
+        "day": 9,
+        "dayId": "day-09",
+        "requirement": "advance-required",
+        "purchaseStatus": "needed",
+        "guidance": [
+          "尚未提供订单凭证。"
+        ],
+        "scheduleItemIds": [
+          "day-09-item-02"
+        ]
+      },
+      {
+        "id": "ticket-seville-bullring",
+        "name": "塞维利亚斗牛场",
+        "day": 9,
+        "dayId": "day-09",
+        "requirement": "needs-confirmation",
+        "purchaseStatus": "planned",
+        "guidance": [
+          "同行人安排仍需确认。"
+        ],
+        "scheduleItemIds": [
+          "day-09-item-03"
+        ]
+      },
+      {
+        "id": "ticket-prado",
+        "name": "普拉多博物馆",
+        "day": 10,
+        "dayId": "day-10",
+        "requirement": "needs-confirmation",
+        "purchaseStatus": "planned",
+        "guidance": [
+          "需确认入场时段；馆内不允许拍照。"
+        ],
+        "scheduleItemIds": [
+          "day-10-item-04"
+        ]
+      },
+      {
+        "id": "ticket-madrid-palace",
+        "name": "马德里王宫",
+        "day": 11,
+        "dayId": "day-11",
+        "requirement": "needs-confirmation",
+        "purchaseStatus": "planned",
+        "guidance": [
+          "参观时段待确认。"
+        ],
+        "scheduleItemIds": [
+          "day-11-item-02"
+        ]
+      },
+      {
+        "id": "ticket-madrid-skybar",
+        "name": "马德里 Sky Bar",
+        "day": 11,
+        "dayId": "day-11",
+        "requirement": "advance-recommended",
+        "purchaseStatus": "needed",
+        "guidance": [
+          "具体场地和预约方式待确认。"
+        ],
+        "scheduleItemIds": [
+          "day-11-item-06"
+        ]
+      }
+    ]
+  },
+  "preTrip": {
+    "packingItems": [
+      {
+        "id": "todo-madrid-stay",
+        "text": "补充马德里住宿订单与地址",
+        "completed": false
+      },
+      {
+        "id": "todo-ux-flights",
+        "text": "确认 UX6037 与 UX5201 是否已出票",
+        "completed": false
+      },
+      {
+        "id": "todo-mallorca-car",
+        "text": "补充马略卡租车公司、取还车时间和地点",
+        "completed": false
+      },
+      {
+        "id": "todo-granada-seville",
+        "text": "购买格拉纳达至塞维利亚车票",
+        "completed": false
+      },
+      {
+        "id": "todo-seville-madrid",
+        "text": "购买塞维利亚至马德里火车票",
+        "completed": false
+      },
+      {
+        "id": "todo-alhambra",
+        "text": "确认并预订阿尔罕布拉宫门票",
+        "completed": false
+      },
+      {
+        "id": "todo-barcelona-tickets",
+        "text": "购买桂尔公园、巴特罗之家和米拉之家门票",
+        "completed": false
+      },
+      {
+        "id": "todo-seville-tickets",
+        "text": "购买塞维利亚大教堂和王宫门票",
+        "completed": false
+      },
+      {
+        "id": "todo-madrid-choice",
+        "text": "决定马德里市区行程或托莱多一日支线",
+        "completed": false
+      },
+      {
+        "id": "todo-check-documents",
+        "text": "出发前检查护照、签证、保险和全部电子凭证",
+        "completed": false
+      }
+    ],
+    "preparationsExplicitlyMentioned": [
+      "准备 Tibidabo 神爱世人机位图",
+      "查询果冻海海滩停车位置"
+    ],
+    "missingNote": "马德里酒店、马略卡租车细节、两段城际交通及部分门票仍待补充。"
+  },
+  "mapLinks": {
+    "providedGoogleMapsLinks": [],
+    "note": "地点按钮使用名称或住宿地址打开地图；未写入私人订单信息。",
+    "cityLevelNavigationDisabled": false,
+    "navigationPolicy": {
+      "noNavigationTypes": [
+        "flight",
+        "note",
+        "rest"
+      ],
+      "selfNavigationTypes": [
+        "drive",
+        "return",
+        "transfer",
+        "check-in",
+        "check-out",
+        "restaurant",
+        "attraction",
+        "walk",
+        "hike"
+      ]
+    },
+    "navigationPlaces": []
+  },
+  "issuesAndUncertainties": [
+    {
+      "id": "issue-madrid-stay",
+      "status": "open",
+      "category": "accommodation",
+      "text": "马德里住宿待补充。"
+    },
+    {
+      "id": "issue-ux-ticket-status",
+      "status": "open",
+      "category": "flight",
+      "text": "UX6037 与 UX5201 已有班次信息，但截图为选购页面，是否出票待确认。"
+    },
+    {
+      "id": "issue-mallorca-rental",
+      "status": "open",
+      "category": "driving",
+      "text": "马略卡租车详情不完整，因此首版暂不启用独立租车模块。"
+    },
+    {
+      "id": "issue-ground-transport",
+      "status": "open",
+      "category": "transport",
+      "text": "格拉纳达至塞维利亚、塞维利亚至马德里尚未购票。"
+    },
+    {
+      "id": "issue-toledo",
+      "status": "open",
+      "category": "decision",
+      "text": "托莱多为备选支线。"
+    }
+  ],
+  "map": {
+    "schemaVersion": "1.0-lite",
+    "mapMode": "template-auto",
+    "templateId": "auto",
+    "defaultRegionId": "spain",
+    "region": {
+      "id": "spain",
+      "label": "西班牙",
+      "countryCode": "ES",
+      "heading": "SPAIN · 2026"
+    },
+    "disclaimer": "本图用于表达旅行地点的相对方位与路线顺序，不代表实时交通线路。",
+    "places": [
+      {
+        "id": "city-barcelona",
+        "countryCode": "ES",
+        "geo": {
+          "lat": 41.3874,
+          "lng": 2.1686
+        }
+      },
+      {
+        "id": "city-mallorca",
+        "countryCode": "ES",
+        "geo": {
+          "lat": 39.5696,
+          "lng": 2.6502
+        }
+      },
+      {
+        "id": "city-granada",
+        "countryCode": "ES",
+        "geo": {
+          "lat": 37.1773,
+          "lng": -3.5986
+        }
+      },
+      {
+        "id": "city-seville",
+        "countryCode": "ES",
+        "geo": {
+          "lat": 37.3891,
+          "lng": -5.9845
+        }
+      },
+      {
+        "id": "city-madrid",
+        "countryCode": "ES",
+        "geo": {
+          "lat": 40.4168,
+          "lng": -3.7038
+        }
+      }
+    ],
+    "routes": [
+      {
+        "day": 4,
+        "placeIds": [
+          "city-barcelona",
+          "city-mallorca"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "city-mallorca",
+          "city-granada"
+        ]
+      },
+      {
+        "day": 8,
+        "placeIds": [
+          "city-granada",
+          "city-seville"
+        ]
+      },
+      {
+        "day": 10,
+        "placeIds": [
+          "city-seville",
+          "city-madrid"
+        ]
+      }
+    ],
+    "dailyRoutes": [
+      {
+        "day": 4,
+        "placeIds": [
+          "city-barcelona",
+          "city-mallorca"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "city-mallorca",
+          "city-granada"
+        ]
+      },
+      {
+        "day": 8,
+        "placeIds": [
+          "city-granada",
+          "city-seville"
+        ]
+      },
+      {
+        "day": 10,
+        "placeIds": [
+          "city-seville",
+          "city-madrid"
+        ]
+      }
+    ]
+  },
+  "routeMap": {
+    "defaultRegionId": "spain",
+    "regions": [
+      {
+        "id": "spain",
+        "label": "西班牙",
+        "countryCode": "ES",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "broad-riverland",
+        "mapModeReason": "east-west-route",
+        "mapModeMetrics": {
+          "placeCount": 5,
+          "geoPlaceCount": 5,
+          "widthKm": 742.87,
+          "heightKm": 467.32,
+          "spanKm": 829.25,
+          "averageNearestKm": 239.5,
+          "components": 1,
+          "largestLegKm": 606.02,
+          "jumpRatio": 1.55
+        },
+        "days": [
+          4,
+          7,
+          8,
+          10
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-10-broad-riverland.webp",
+        "title": "西班牙 · 旅行路线",
+        "ariaLabel": "西班牙模板化旅行路线示意图，共4天",
+        "disclaimer": "本图用于表达旅行地点的相对方位与路线顺序，不代表实时交通线路。",
+        "heading": {
+          "text": "SPAIN · 2026",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 4,
+            "color": "#209aaa",
+            "placeIds": [
+              "city-barcelona",
+              "city-mallorca"
+            ],
+            "paths": [
+              "M1075.02 278.62 C1068.5 356.9 1083.6 430.7 1119.6 495.7"
+            ],
+            "overviewPaths": [
+              "M1075.02 278.62 C1068.5 356.9 1083.6 430.7 1119.6 495.7"
+            ]
+          },
+          {
+            "day": 7,
+            "color": "#397dc1",
+            "placeIds": [
+              "city-mallorca",
+              "city-granada"
+            ],
+            "paths": [
+              "M1119.6 495.7 C936.2 619.7 739.6 716.9 541.23 781.38"
+            ],
+            "overviewPaths": [
+              "M1119.6 495.7 C936.2 619.7 739.6 716.9 541.23 781.38"
+            ]
+          },
+          {
+            "day": 8,
+            "color": "#e77e22",
+            "placeIds": [
+              "city-granada",
+              "city-seville"
+            ],
+            "paths": [
+              "M541.23 781.38 C468.7 750.7 393.6 742.1 320.4 756.08"
+            ],
+            "overviewPaths": [
+              "M541.23 781.38 C468.7 750.7 393.6 742.1 320.4 756.08"
+            ]
+          },
+          {
+            "day": 10,
+            "color": "#209aaa",
+            "placeIds": [
+              "city-seville",
+              "city-madrid"
+            ],
+            "paths": [
+              "M320.4 756.08 C418.1 648.3 489.8 525.4 531.49 394.53"
+            ],
+            "overviewPaths": [
+              "M320.4 756.08 C418.1 648.3 489.8 525.4 531.49 394.53"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "city-barcelona",
+            "x": 1075.02,
+            "y": 278.62,
+            "color": "#209aaa",
+            "tx": 1107.02,
+            "ty": 246.62,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "city-barcelona"
+            ],
+            "query": "city-barcelona 西班牙",
+            "geo": {
+              "lat": 41.3874,
+              "lng": 2.1686
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "city-mallorca",
+            "x": 1119.6,
+            "y": 495.7,
+            "color": "#209aaa",
+            "tx": 1087.6,
+            "ty": 463.7,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "city-mallorca"
+            ],
+            "query": "city-mallorca 西班牙",
+            "geo": {
+              "lat": 39.5696,
+              "lng": 2.6502
+            },
+            "days": [
+              4,
+              7
+            ]
+          },
+          {
+            "id": "city-granada",
+            "x": 541.23,
+            "y": 781.38,
+            "color": "#397dc1",
+            "tx": 619.23,
+            "ty": 719.38,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "city-granada"
+            ],
+            "query": "city-granada 西班牙",
+            "geo": {
+              "lat": 37.1773,
+              "lng": -3.5986
+            },
+            "days": [
+              7,
+              8
+            ]
+          },
+          {
+            "id": "city-seville",
+            "x": 320.4,
+            "y": 756.08,
+            "color": "#e77e22",
+            "tx": 242.4,
+            "ty": 694.08,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "city-seville"
+            ],
+            "query": "city-seville 西班牙",
+            "geo": {
+              "lat": 37.3891,
+              "lng": -5.9845
+            },
+            "days": [
+              8,
+              10
+            ]
+          },
+          {
+            "id": "city-madrid",
+            "x": 531.49,
+            "y": 394.53,
+            "color": "#209aaa",
+            "tx": 669.49,
+            "ty": 306.53,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "city-madrid"
+            ],
+            "query": "city-madrid 西班牙",
+            "geo": {
+              "lat": 40.4168,
+              "lng": -3.7038
+            },
+            "days": [
+              10
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "city-barcelona",
+          "city-mallorca",
+          "city-granada",
+          "city-seville",
+          "city-madrid"
+        ],
+        "dailyLayouts": {
+          "4": {
+            "places": [
+              "city-barcelona",
+              "city-mallorca"
+            ],
+            "labels": {
+              "city-barcelona": {
+                "x": 1107.02,
+                "y": 246.62,
+                "anchor": "start"
+              },
+              "city-mallorca": {
+                "x": 1087.6,
+                "y": 463.7,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1097.31,
+                "y": 387.16
+              }
+            ]
+          },
+          "7": {
+            "places": [
+              "city-mallorca",
+              "city-granada"
+            ],
+            "labels": {
+              "city-mallorca": {
+                "x": 1087.6,
+                "y": 463.7,
+                "anchor": "end"
+              },
+              "city-granada": {
+                "x": 619.23,
+                "y": 719.38,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 830.41,
+                "y": 638.54
+              }
+            ]
+          },
+          "8": {
+            "places": [
+              "city-granada",
+              "city-seville"
+            ],
+            "labels": {
+              "city-granada": {
+                "x": 619.23,
+                "y": 719.38,
+                "anchor": "start"
+              },
+              "city-seville": {
+                "x": 242.4,
+                "y": 694.08,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 430.81,
+                "y": 768.73
+              }
+            ]
+          },
+          "10": {
+            "places": [
+              "city-seville",
+              "city-madrid"
+            ],
+            "labels": {
+              "city-seville": {
+                "x": 242.4,
+                "y": 694.08,
+                "anchor": "end"
+              },
+              "city-madrid": {
+                "x": 669.49,
+                "y": 306.53,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 425.94,
+                "y": 575.31
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

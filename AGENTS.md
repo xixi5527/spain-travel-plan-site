@@ -17,7 +17,7 @@ https://xixi5527.github.io/spain-travel-plan-site/
 
 1. Run `node scripts/validate-cloud.mjs`.
 2. Review the diff for accidental private information.
-3. Commit to `main` only after validation succeeds.
-4. After pushing, wait for GitHub Pages to finish and verify the public URL loads.
+3. Commit the change on a task branch and open a pull request to `main`.
+4. Merge only after validation succeeds. Then wait for GitHub Pages to finish and verify the public URL loads.
 
 For small itinerary updates, prefer changing only `trip-data.json`. Update HTML, CSS, or JavaScript only when the requested presentation or behavior requires it.

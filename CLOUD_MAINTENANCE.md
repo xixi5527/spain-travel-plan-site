@@ -5,13 +5,13 @@
 1. 在 ChatGPT 手机端新建一个云端工作任务。
 2. 选择 GitHub 仓库 `xixi5527/spain-travel-plan-site`。
 3. 直接描述需要修改的内容，例如：“把 10 月 8 日晚餐改成待定，并发布网页。”
-4. 云端任务会修改文件、执行校验并提交到 `main`。
-5. GitHub Pages 会自动更新公开网页：
+4. 云端任务会修改文件、执行校验并创建 Pull Request。
+5. 在手机上确认自动校验通过并合并 Pull Request；GitHub Pages 随后会自动更新公开网页：
    https://xixi5527.github.io/spain-travel-plan-site/
 
 ## 推荐的手机指令
 
-> 请更新西班牙旅行网页。先读取 AGENTS.md，修改后运行 `node scripts/validate-cloud.mjs`，检查没有新增敏感信息，再提交到 main。等待 GitHub Pages 发布成功后，把公开链接和修改摘要发给我。
+> 请更新西班牙旅行网页。先读取 AGENTS.md，修改后运行 `node scripts/validate-cloud.mjs`，检查没有新增敏感信息，再创建一个合并到 main 的 Pull Request。告诉我修改摘要、自动校验状态和需要我在手机上完成的操作。
 
 ## 数据边界
 
